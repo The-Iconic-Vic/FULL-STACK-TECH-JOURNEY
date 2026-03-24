@@ -1,6 +1,6 @@
 # 📚 Day 2 Resources - HTML Structure & Semantics
 
-**Curated by:** Victor Innocent (@TheIconicVic)  
+**Curated by:** Victor Innocent (@TheIconicVic)  
 **Date:** March 25, 2026
 
 A collection of the best resources I found for learning semantic HTML, text elements, and proper document structure.
@@ -186,5 +186,3 @@ After mastering Day 2, you're ready for:
 ---
 
 *Resources compiled: March 25, 2026* | *Part of Day 2 - HTML Structure & Semantics*
-
-*Last updated as I discover new resources on my journey!*
