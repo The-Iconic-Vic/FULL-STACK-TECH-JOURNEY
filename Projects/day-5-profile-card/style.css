@@ -1,0 +1,97 @@
+/* Universal Border-Box Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Profile Card */
+.profile-card {
+    width: 100%;
+    max-width: 380px;
+    background: white;
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Profile Photo */
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    display: block;
+    border: 4px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Profile Name */
+.profile-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.25rem;
+}
+
+/* Profile Title */
+.profile-title {
+    font-size: 0.875rem;
+    color: #667eea;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/* Profile Bio */
+.profile-bio {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+}
+
+/* Social Links Container */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Social Link Buttons */
+.social-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.social-link:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
