@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 1.75rem;
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.container > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Form Group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Labels */
+label {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.875rem;
+}
+
+/* Required field indicator */
+.form-group label::after {
+    content: " *";
+    color: #dc3545;
+}
+
+/* Inputs, Select, Textarea */
+input, select, textarea {
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #2a5298;
+    box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* ============================================
+   VALIDATION STYLES (Real-time)
+   ============================================ */
+
+/* Valid input styling - GREEN border */
+input:valid, select:valid, textarea:valid {
+    border-color: #28a745;
+}
+
+/* Invalid input styling - RED border */
+input:invalid:not(:placeholder-shown),
+select:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+    border-color: #dc3545;
+}
+
+/* Error message - hidden by default */
+.error-message {
+    font-size: 0.75rem;
+    color: #dc3545;
+    display: none;
+}
+
+/* Valid feedback - hidden by default */
+.valid-feedback {
+    font-size: 0.75rem;
+    color: #28a745;
+    display: none;
+}
+
+/* Show error message when input is invalid */
+input:invalid:not(:placeholder-shown) + .error-message,
+select:invalid:not(:placeholder-shown) + .error-message,
+textarea:invalid:not(:placeholder-shown) + .error-message {
+    display: block;
+}
+
+/* Show valid feedback when input is valid AND has content */
+input:valid:not(:placeholder-shown) ~ .valid-feedback,
+select:valid:not(:placeholder-shown) ~ .valid-feedback,
+textarea:valid:not(:placeholder-shown) ~ .valid-feedback {
+    display: block;
+}
+
+/* Special handling for select (no placeholder) */
+select:invalid + .error-message {
+    display: block;
+}
+
+select:valid ~ .valid-feedback {
+    display: block;
+}
+
+/* ============================================
+   FIELDSTYLES & RADIO GROUPS
+   ============================================ */
+
+fieldset {
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+}
+
+legend {
+    font-weight: 600;
+    padding: 0 0.5rem;
+    color: #333;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0.5rem 0;
+}
+
+.radio-group input {
+    width: auto;
+    margin: 0;
+}
+
+.radio-group label {
+    font-weight: normal;
+    margin: 0;
+}
+
+.radio-group label::after {
+    content: "";
+}
+
+/* ============================================
+   SUBMIT BUTTON
+   ============================================ */
+
+.submit-btn {
+    background: #2a5298;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.submit-btn:hover {
+    background: #1e3c72;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(30, 60, 114, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Submit button enabled state - when form is valid */
+form:valid .submit-btn {
+    background: #28a745;
+    cursor: pointer;
+}
+
+form:valid .submit-btn:hover {
+    background: #218838;
+}
+
+/* Submit button disabled state - when form is invalid */
+form:invalid .submit-btn {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* ============================================
+   FORM NOTE
+   ============================================ */
+
+.form-note {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.form-note p {
+    font-size: 0.75rem;
+    color: #666;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .container {
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 1.75rem;
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.container > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Form Styles */
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* Form Group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Labels */
+label {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.875rem;
+}
+
+/* Inputs, Select */
+input, select {
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: inherit;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* ============================================
+   VALIDATION STYLES
+   ============================================ */
+
+/* Required field indicator */
+label::after {
+    content: " *";
+    color: #dc3545;
+}
+
+/* Valid input styling */
+input:valid, select:valid {
+    border-color: #28a745;
+}
+
+/* Invalid input styling */
+input:invalid:not(:placeholder-shown), 
+select:invalid:not(:placeholder-shown) {
+    border-color: #dc3545;
+}
+
+/* Error message display */
+.error-message {
+    font-size: 0.75rem;
+    color: #dc3545;
+    display: none;
+}
+
+/* Show error message when input is invalid */
+input:invalid:not(:placeholder-shown) + .error-message,
+select:invalid:not(:placeholder-shown) + .error-message {
+    display: block;
+}
+
+/* Date input special handling */
+input[type="date"]:invalid {
+    border-color: #dc3545;
+}
+
+input[type="date"]:valid {
+    border-color: #28a745;
+}
+
+/* Fieldset Styles */
+fieldset {
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin: 0.5rem 0;
+}
+
+legend {
+    font-weight: 600;
+    padding: 0 0.5rem;
+    color: #333;
+}
+
+/* Checkbox Group */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0.75rem 0;
+}
+
+.checkbox-group input {
+    width: auto;
+    margin: 0;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+    margin: 0;
+}
+
+.checkbox-group label::after {
+    content: "";
+}
+
+/* Checkbox required styling */
+input[name="terms"]:invalid {
+    outline: 2px solid #dc3545;
+    outline-offset: 2px;
+}
+
+input[name="terms"]:valid {
+    outline: 2px solid #28a745;
+    outline-offset: 2px;
+}
+
+/* Submit Button */
+.submit-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.submit-btn:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Link in checkbox */
+.checkbox-group a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.checkbox-group a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .container {
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+}
