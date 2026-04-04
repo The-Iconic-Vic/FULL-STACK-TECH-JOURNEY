@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Page | JavaScript Basics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>JavaScript Interactive Demo</h1>
+        <p>Try out these interactive features</p>
+
+        <!-- Feature 1: Button that changes text -->
+        <div class="feature">
+            <h2>1. Text Changer</h2>
+            <p id="changeable-text">Click the button to change this text!</p>
+            <button id="text-changer-btn">Change Text</button>
+        </div>
+
+        <!-- Feature 2: Input that displays typed text -->
+        <div class="feature">
+            <h2>2. Live Typing Display</h2>
+            <input type="text" id="live-input" placeholder="Type something here...">
+            <p>You typed: <span id="display-text">(nothing yet)</span></p>
+        </div>
+
+        <!-- Feature 3: Color changer on hover -->
+        <div class="feature">
+            <h2>3. Color Changer</h2>
+            <div id="color-box" class="color-box">
+                Hover over this box to change its color!
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
