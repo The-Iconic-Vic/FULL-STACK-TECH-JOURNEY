@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List | JavaScript Events & Functions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>📝 My To-Do List</h1>
+        <p>Add tasks, click to mark complete, and track your progress</p>
+
+        <div class="input-section">
+            <input type="text" id="task-input" placeholder="Enter a new task...">
+            <button id="add-btn">Add Task</button>
+        </div>
+
+        <div class="stats">
+            <p>Total tasks: <span id="total-count">0</span></p>
+            <p>Completed tasks: <span id="completed-count">0</span></p>
+        </div>
+
+        <ul id="task-list">
+            <li class="empty-message">No tasks yet. Add one above!</li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
