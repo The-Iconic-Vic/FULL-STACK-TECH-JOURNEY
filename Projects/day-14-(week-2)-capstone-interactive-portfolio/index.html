@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Innocent | Interactive Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Victor Innocent</div>
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="dark-mode-toggle" class="dark-mode-btn">🌙 Dark Mode</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="hero-greeting">Hi, I'm</p>
+                <h1 class="hero-name">Victor Innocent</h1>
+                <p class="hero-title">Full-Stack Developer in Training</p>
+                <p class="hero-description">On a 9-month journey to become job-ready with AI integration skills. Documenting everything I learn, building in public.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="images/profile_1.jpg" alt="Victor Innocent">
+                    </div>
+                    <div class="about-text">
+                        <p>I'm an aspiring Full-Stack Developer passionate about creating beautiful, functional web experiences. My journey started with HTML and CSS, and I'm now mastering JavaScript, React, and Python.</p>
+                        <p>I believe in learning in public—documenting my progress helps me grow and hopefully inspires others to start their own coding journey.</p>
+                        <p>When I'm not coding, you'll find me exploring new technologies, contributing to open source, or sharing my journey on Twitter as <strong>@TheIconicVic</strong>.</p>
+                        <div class="about-stats">
+                            <div class="stat">
+                                <span class="stat-number">14</span>
+                                <span class="stat-label">Days Coding</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">Projects</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100+</span>
+                                <span class="stat-label">Commits</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">My Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">🌐</div>
+                        <h3>HTML5</h3>
+                        <p>Semantic markup, accessibility, SEO-friendly structure</p>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🎨</div>
+                        <h3>CSS3</h3>
+                        <p>Flexbox, Grid, responsive design, animations</p>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">📜</div>
+                        <h3>JavaScript</h3>
+                        <p>ES6+, DOM manipulation, async/await, APIs</p>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">⚛️</div>
+                        <h3>React</h3>
+                        <p>Components, hooks, state management (in progress)</p>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 40%"></div>
+                        </div>
+                        <span class="skill-percent">40%</span>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🐍</div>
+                        <h3>Python</h3>
+                        <p>FastAPI, data processing (coming soon)</p>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 35%"></div>
+                        </div>
+                        <span class="skill-percent">35%</span>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">📦</div>
+                        <h3>Git & GitHub</h3>
+                        <p>Version control, collaboration, documentation</p>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section with Filter -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">My Projects</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="html-css">HTML/CSS</button>
+                    <button class="filter-btn" data-filter="javascript">JavaScript</button>
+                    <button class="filter-btn" data-filter="responsive">Responsive</button>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card" data-category="html-css">
+                        <img src="images/about_me_page.png" alt="Project 1" class="project-image">
+                        <div class="project-content">
+                            <h3>About Me Page</h3>
+                            <p>My first HTML page introducing myself and my 9-month journey.</p>
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                            </div>
+                            <a href="#" class="project-link">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="html-css">
+                        <img src="images/recipe_page.png" alt="Project 2" class="project-image">
+                        <div class="project-content">
+                            <h3>Recipe Page</h3>
+                            <p>Semantic HTML recipe page with ingredients, instructions, and tips.</p>
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>Semantic</span>
+                            </div>
+                            <a href="#" class="project-link">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="html-css">
+                        <img src="images/photo_gallery.png" alt="Project 3" class="project-image">
+                        <div class="project-content">
+                            <h3>Photo Gallery</h3>
+                            <p>Multi-page photo gallery with thumbnails linking to full-size images.</p>
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>Links</span>
+                            </div>
+                            <a href="#" class="project-link">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="html-css responsive">
+                        <img src="images/business_card.png" alt="Project 4" class="project-image">
+                        <div class="project-content">
+                            <h3>Business Card</h3>
+                            <p>Styled digital business card with CSS colors, fonts, and box model.</p>
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                            </div>
+                            <a href="#" class="project-link">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="html-css responsive javascript">
+                        <img src="images/navigation_bar.png" alt="Project 5" class="project-image">
+                        <div class="project-content">
+                            <h3>Navigation Bar</h3>
+                            <p>Responsive navigation bar built with Flexbox.</p>
+                            <div class="project-tags">
+                                <span>Flexbox</span>
+                                <span>Responsive</span>
+                            </div>
+                            <a href="#" class="project-link">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="html-css responsive javascript">
+                        <img src="images/card_grid.png" alt="Project 6" class="project-image">
+                        <div class="project-content">
+                            <h3>Card Grid</h3>
+                            <p>Responsive card grid using Flexbox wrap and flex-basis.</p>
+                            <div class="project-tags">
+                                <span>Flexbox</span>
+                                <span>Grid</span>
+                            </div>
+                            <a href="#" class="project-link">View Project →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section with Form -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <p class="contact-text">I'm currently documenting my journey and looking for opportunities to collaborate, learn, and grow. Feel free to reach out!</p>
+                        <div class="contact-links">
+                            <a href="https://twitter.com/TheIconicVic_" target="_blank" rel="noopener noreferrer" class="contact-link">
+                                <span class="contact-icon">🐦</span>
+                                Twitter
+                            </a>
+                            <a href="https://github.com/The-Iconic-Vic" target="_blank" rel="noopener noreferrer" class="contact-link">
+                                <span class="contact-icon">📂</span>
+                                GitHub
+                            </a>
+                            <a href="https://linkedin.com/in" target="_blank" rel="noopener noreferrer" class="contact-link">
+                                <span class="contact-icon">💼</span>
+                                LinkedIn
+                            </a>
+                            <a href="mailto:victor@example.com" class="contact-link">
+                                <span class="contact-icon">📧</span>
+                                Email
+                            </a>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required minlength="2">
+                            <div class="error-message">Please enter your name (min. 2 characters)</div>
+                            <div class="valid-feedback">✓ Looks good!</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="error-message">Please enter a valid email address</div>
+                            <div class="valid-feedback">✓ Valid email</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required minlength="10"></textarea>
+                            <div class="error-message">Message must be at least 10 characters</div>
+                            <div class="valid-feedback">✓ Message looks good</div>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                        <div id="form-status" class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Victor Innocent. Built with HTML5, CSS3, JavaScript, Flexbox, and CSS Grid.</p>
+            <p>Documenting my 9-month journey to becoming a Full-Stack Developer.</p>
+            <p><a href="#top" class="back-to-top">⬆️ Back to Top</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
