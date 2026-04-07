@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 1.75rem;
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.container > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.input-section input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.input-section input:focus {
+    outline: none;
+    border-color: #2a5298;
+}
+
+.input-section button {
+    background: #2a5298;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.input-section button:hover {
+    background: #1e3c72;
+    transform: translateY(-2px);
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.action-buttons button {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    font-size: 0.875rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-buttons button:hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+}
+
+#show-high-grade-btn {
+    background: #28a745;
+}
+
+#show-high-grade-btn:hover {
+    background: #218838;
+}
+
+#show-passing-btn {
+    background: #17a2b8;
+}
+
+#show-passing-btn:hover {
+    background: #138496;
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    background: #f8f9fa;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.stats p {
+    color: #555;
+    font-weight: 500;
+}
+
+.stats span {
+    color: #2a5298;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Student List */
+.list-container h2 {
+    font-size: 1.25rem;
+    color: #1a1a2e;
+    margin-bottom: 1rem;
+}
+
+#student-list {
+    list-style: none;
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.student-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.student-item:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.student-info {
+    flex: 2;
+}
+
+.student-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.student-grade {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 0.75rem;
+}
+
+.grade-a {
+    background: #28a745;
+    color: white;
+}
+
+.grade-b {
+    background: #17a2b8;
+    color: white;
+}
+
+.grade-c {
+    background: #ffc107;
+    color: #333;
+}
+
+.grade-d {
+    background: #fd7e14;
+    color: white;
+}
+
+.grade-f {
+    background: #dc3545;
+    color: white;
+}
+
+.student-age {
+    color: #666;
+    font-size: 0.875rem;
+}
+
+.empty-message {
+    text-align: center;
+    color: #999;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+/* Demo Section */
+.demo-section {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.demo-section h3 {
+    font-size: 1rem;
+    color: #1a1a2e;
+    margin-bottom: 0.75rem;
+}
+
+.demo-section ul {
+    padding-left: 1.5rem;
+    color: #666;
+    font-size: 0.875rem;
+}
+
+.demo-section li {
+    margin: 0.25rem 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .container {
+        padding: 1.5rem;
+    }
+    
+    .input-section {
+        flex-direction: column;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .stats {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .student-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+}
