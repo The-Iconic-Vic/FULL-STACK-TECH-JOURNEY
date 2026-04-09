@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 1.75rem;
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.container > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.input-section {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+#todo-input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+#todo-input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+#add-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#add-btn:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.filter-btn {
+    background: #f8f9fa;
+    color: #666;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background: #e9ecef;
+}
+
+.filter-btn.active {
+    background: #667eea;
+    color: white;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.stats p {
+    color: #555;
+    font-size: 0.875rem;
+}
+
+.stats span {
+    color: #667eea;
+    font-weight: bold;
+}
+
+#clear-completed-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#clear-completed-btn:hover {
+    background: #c82333;
+}
+
+.clear-all {
+    background: #6c757d !important;
+}
+
+.clear-all:hover {
+    background: #5a6268 !important;
+}
+
+#todo-list {
+    list-style: none;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.todo-item:hover {
+    background: #e9ecef;
+}
+
+.todo-item.completed .todo-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.todo-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #28a745;
+}
+
+.todo-text {
+    flex: 1;
+    font-size: 1rem;
+    color: #333;
+    word-break: break-word;
+}
+
+.edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.edit-btn {
+    color: #17a2b8;
+}
+
+.edit-btn:hover {
+    background: #17a2b8;
+    color: white;
+}
+
+.delete-btn {
+    color: #dc3545;
+}
+
+.delete-btn:hover {
+    background: #dc3545;
+    color: white;
+}
+
+.empty-message {
+    text-align: center;
+    color: #999;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .container {
+        padding: 1.5rem;
+    }
+    
+    .input-section {
+        flex-direction: column;
+    }
+    
+    .filter-buttons {
+        flex-wrap: wrap;
+    }
+    
+    .stats {
+        flex-direction: column;
+        text-align: center;
+    }
+}

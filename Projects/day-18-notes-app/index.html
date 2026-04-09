@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App | LocalStorage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <h1>📝 Notes App</h1>
+        <p>Your notes are saved automatically</p>
+
+        <div class="search-section">
+            <input type="text" id="search-input" placeholder="Search notes by title...">
+        </div>
+
+        <div class="editor-section">
+            <input type="text" id="note-title" placeholder="Note title">
+            <textarea id="note-content" rows="5" placeholder="Write your note here..."></textarea>
+            <div class="editor-buttons">
+                <button id="save-note-btn">Save Note</button>
+                <button id="cancel-edit-btn" class="cancel-btn">Cancel Edit</button>
+            </div>
+        </div>
+
+        <div class="stats">
+            <p>Total Notes: <span id="note-count">0</span></p>
+            <p>Last saved: <span id="last-saved">Never</span></p>
+        </div>
+
+        <div class="notes-header">
+            <h2>My Notes</h2>
+            <button id="clear-all-notes-btn" class="clear-all-btn">Delete All Notes</button>
+        </div>
+
+        <div id="notes-list" class="notes-list">
+            <div class="empty-message">No notes yet. Create one above!</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
