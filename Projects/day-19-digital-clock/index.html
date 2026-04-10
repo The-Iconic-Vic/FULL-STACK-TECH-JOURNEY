@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock | JavaScript Date & Timers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🕐 Digital Clock</h1>
+        <p>Current time with live updates</p>
+
+        <div class="clock-container">
+            <div class="time-section">
+                <div class="time" id="time-display">--:--:--</div>
+                <div class="ampm" id="ampm-display"></div>
+            </div>
+            
+            <div class="date-section">
+                <div class="date" id="date-display">--</div>
+                <div class="day" id="day-display">--</div>
+            </div>
+
+            <div class="toggle-section">
+                <button id="format-toggle" class="toggle-btn">Switch to 12-Hour</button>
+            </div>
+        </div>
+
+        <div class="stopwatch-section">
+            <h2>⏱️ Stopwatch</h2>
+            <div class="stopwatch-display" id="stopwatch-display">00:00:00</div>
+            <div class="stopwatch-controls">
+                <button id="stopwatch-start" class="sw-start">Start</button>
+                <button id="stopwatch-pause" class="sw-pause">Pause</button>
+                <button id="stopwatch-reset" class="sw-reset">Reset</button>
+                <button id="stopwatch-lap" class="sw-lap">Lap</button>
+            </div>
+            <ul id="lap-list" class="lap-list"></ul>
+        </div>
+
+        <div class="demo-section">
+            <h3>Date & Timer Methods Demonstrated</h3>
+            <ul>
+                <li><strong>Date object</strong> - getFullYear(), getMonth(), getDate(), getDay()</li>
+                <li><strong>setInterval()</strong> - Update clock every second</li>
+                <li><strong>clearInterval()</strong> - Stop stopwatch</li>
+                <li><strong>Date formatting</strong> - toLocaleTimeString(), toLocaleDateString()</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

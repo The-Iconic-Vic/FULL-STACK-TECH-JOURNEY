@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 1.75rem;
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.container > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Clock Container */
+.clock-container {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.time-section {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.time {
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: monospace;
+    color: #00d4ff;
+    letter-spacing: 3px;
+}
+
+.ampm {
+    font-size: 1.25rem;
+    color: #00d4ff;
+    font-weight: 500;
+}
+
+.date-section {
+    margin-bottom: 1rem;
+}
+
+.date {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0.25rem;
+}
+
+.day {
+    font-size: 1rem;
+    color: #a0a0a0;
+}
+
+.toggle-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Stopwatch Section */
+.stopwatch-section {
+    background: #f8f9fa;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.stopwatch-section h2 {
+    font-size: 1.25rem;
+    color: #1a1a2e;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.stopwatch-display {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    color: #1a1a2e;
+}
+
+.stopwatch-controls {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.stopwatch-controls button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sw-start {
+    background: #28a745;
+    color: white;
+}
+
+.sw-start:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+.sw-pause {
+    background: #ffc107;
+    color: #333;
+}
+
+.sw-pause:hover {
+    background: #e0a800;
+    transform: translateY(-2px);
+}
+
+.sw-reset {
+    background: #dc3545;
+    color: white;
+}
+
+.sw-reset:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+.sw-lap {
+    background: #17a2b8;
+    color: white;
+}
+
+.sw-lap:hover {
+    background: #138496;
+    transform: translateY(-2px);
+}
+
+.lap-list {
+    list-style: none;
+    max-height: 150px;
+    overflow-y: auto;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.lap-list li {
+    padding: 0.5rem;
+    font-family: monospace;
+    font-size: 0.875rem;
+    color: #555;
+    border-bottom: 1px solid #e9ecef;
+    text-align: center;
+}
+
+.lap-list li:last-child {
+    border-bottom: none;
+}
+
+/* Demo Section */
+.demo-section {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.demo-section h3 {
+    font-size: 1rem;
+    color: #1a1a2e;
+    margin-bottom: 0.75rem;
+}
+
+.demo-section ul {
+    padding-left: 1.5rem;
+    color: #666;
+    font-size: 0.875rem;
+}
+
+.demo-section li {
+    margin: 0.25rem 0;
+}
+
+@media (max-width: 550px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .container {
+        padding: 1.5rem;
+    }
+    
+    .time {
+        font-size: 2.5rem;
+    }
+    
+    .stopwatch-display {
+        font-size: 2rem;
+    }
+    
+    .stopwatch-controls {
+        gap: 0.5rem;
+    }
+    
+    .stopwatch-controls button {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.75rem;
+    }
+}

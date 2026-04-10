@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 550px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 1.75rem;
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.container > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.input-section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.time-input {
+    text-align: center;
+}
+
+.time-input label {
+    display: block;
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.time-input input {
+    width: 100px;
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.time-input input:focus {
+    outline: none;
+    border-color: #2a5298;
+}
+
+.display {
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: monospace;
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    color: #1a1a2e;
+    letter-spacing: 5px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.controls button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.start {
+    background: #28a745;
+    color: white;
+}
+
+.start:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+.pause {
+    background: #ffc107;
+    color: #333;
+}
+
+.pause:hover {
+    background: #e0a800;
+    transform: translateY(-2px);
+}
+
+.reset {
+    background: #dc3545;
+    color: white;
+}
+
+.reset:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+.status {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.status p {
+    color: #666;
+    font-size: 0.875rem;
+}
+
+.demo-section {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.demo-section h3 {
+    font-size: 1rem;
+    color: #1a1a2e;
+    margin-bottom: 0.75rem;
+}
+
+.demo-section ul {
+    padding-left: 1.5rem;
+    color: #666;
+    font-size: 0.875rem;
+}
+
+.demo-section li {
+    margin: 0.25rem 0;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .container {
+        padding: 1.5rem;
+    }
+    
+    .display {
+        font-size: 3rem;
+    }
+    
+    .controls button {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    .input-section {
+        gap: 1rem;
+    }
+    
+    .time-input input {
+        width: 70px;
+    }
+}

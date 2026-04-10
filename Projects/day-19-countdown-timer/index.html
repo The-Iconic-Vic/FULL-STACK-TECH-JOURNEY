@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer | JavaScript Timers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>⏱️ Countdown Timer</h1>
+        <p>Set minutes and seconds, then start the countdown</p>
+
+        <div class="input-section">
+            <div class="time-input">
+                <label>Minutes</label>
+                <input type="number" id="minutes-input" min="0" max="99" value="1">
+            </div>
+            <div class="time-input">
+                <label>Seconds</label>
+                <input type="number" id="seconds-input" min="0" max="59" value="0">
+            </div>
+        </div>
+
+        <div class="display">
+            <span id="minutes-display">01</span>:<span id="seconds-display">00</span>
+        </div>
+
+        <div class="controls">
+            <button id="start-btn" class="start">Start</button>
+            <button id="pause-btn" class="pause">Pause</button>
+            <button id="reset-btn" class="reset">Reset</button>
+        </div>
+
+        <div class="status">
+            <p id="status-message">Ready</p>
+        </div>
+
+        <div class="demo-section">
+            <h3>Timer Methods Demonstrated</h3>
+            <ul>
+                <li><strong>setInterval()</strong> - Update timer every second</li>
+                <li><strong>clearInterval()</strong> - Stop the timer</li>
+                <li><strong>setTimeout()</strong> - Show alert when timer ends</li>
+                <li><strong>Date object</strong> - For tracking elapsed time</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
