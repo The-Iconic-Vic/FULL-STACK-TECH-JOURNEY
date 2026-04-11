@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searchable Dropdown | Keyboard Events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🔍 Searchable Dropdown</h1>
+        <p>Type to search, use arrow keys to navigate, Enter to select</p>
+
+        <div class="dropdown-container">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search for a country..." autocomplete="off">
+                <div class="dropdown-arrow">▼</div>
+            </div>
+            <ul id="dropdown-list" class="dropdown-list"></ul>
+        </div>
+
+        <div class="selected-section">
+            <p>Selected: <span id="selected-value">None</span></p>
+        </div>
+
+        <div class="demo-section">
+            <h3>Keyboard Events Demonstrated</h3>
+            <ul>
+                <li><strong>keydown</strong> - Detect up/down arrow keys, Enter, Escape</li>
+                <li><strong>input</strong> - Debounced search filtering</li>
+                <li><strong>Event delegation</strong> - Handle clicks on dynamic items</li>
+                <li><strong>preventDefault()</strong> - Prevent arrow key scrolling</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
