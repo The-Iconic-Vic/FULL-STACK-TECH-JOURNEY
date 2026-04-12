@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster | Personal Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>📋 TaskMaster</h1>
+            <p>Manage your tasks efficiently</p>
+            <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
+        </header>
+
+        <!-- Add Task Section -->
+        <div class="add-task-section">
+            <h2>Add New Task</h2>
+            <div class="task-form">
+                <input type="text" id="task-title" placeholder="Task title" required>
+                <textarea id="task-desc" placeholder="Description (optional)" rows="2"></textarea>
+                <div class="form-row">
+                    <input type="date" id="task-due">
+                    <select id="task-priority">
+                        <option value="low">🟢 Low Priority</option>
+                        <option value="medium" selected>🟡 Medium Priority</option>
+                        <option value="high">🔴 High Priority</option>
+                    </select>
+                    <select id="task-category">
+                        <option value="personal">👤 Personal</option>
+                        <option value="work">💼 Work</option>
+                        <option value="shopping">🛒 Shopping</option>
+                        <option value="other">📌 Other</option>
+                    </select>
+                </div>
+                <button id="add-task-btn" class="btn-primary">+ Add Task</button>
+            </div>
+        </div>
+
+        <!-- Controls Section -->
+        <div class="controls-section">
+            <div class="search-sort">
+                <input type="text" id="search-input" placeholder="🔍 Search tasks...">
+                <select id="sort-select">
+                    <option value="date-asc">📅 Due Date (Earliest first)</option>
+                    <option value="date-desc">📅 Due Date (Latest first)</option>
+                    <option value="priority">⚠️ Priority (High to Low)</option>
+                    <option value="alpha-asc">🔤 Title (A-Z)</option>
+                    <option value="alpha-desc">🔤 Title (Z-A)</option>
+                </select>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+                <button id="clear-completed-btn" class="clear-btn">Clear Completed</button>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="stat-card">
+                <span class="stat-value" id="total-count">0</span>
+                <span class="stat-label">Total Tasks</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value" id="active-count">0</span>
+                <span class="stat-label">Active</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value" id="completed-count">0</span>
+                <span class="stat-label">Completed</span>
+            </div>
+            <div class="stat-card">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <span class="stat-label" id="progress-percent">0% Complete</span>
+            </div>
+        </div>
+
+        <!-- Tasks List -->
+        <div class="tasks-section">
+            <h2>My Tasks</h2>
+            <div id="tasks-container" class="tasks-container">
+                <div class="empty-state">No tasks yet. Add your first task above!</div>
+            </div>
+        </div>
+
+        <!-- Export/Import Section -->
+        <div class="data-actions">
+            <button id="export-btn" class="btn-secondary">📥 Export Tasks (JSON)</button>
+            <label for="import-file" class="btn-secondary">📤 Import Tasks</label>
+            <input type="file" id="import-file" accept=".json" style="display: none;">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
