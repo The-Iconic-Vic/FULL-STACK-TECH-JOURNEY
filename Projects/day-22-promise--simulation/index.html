@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Simulation | Async JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>📡 Promise Simulation</h1>
+        <p>Demonstrating Promises, .then(), .catch(), and Promise chaining</p>
+
+        <div class="demo-section">
+            <h2>Basic Promise</h2>
+            <button id="basic-promise-btn">Run Basic Promise</button>
+            <div id="basic-output" class="output"></div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Promise Chaining</h2>
+            <button id="chain-promise-btn">Run Promise Chain</button>
+            <div id="chain-output" class="output"></div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Promise with Random Error</h2>
+            <button id="error-promise-btn">Run with Error Chance</button>
+            <div id="error-output" class="output"></div>
+        </div>
+
+        <div class="explanation">
+            <h3>What's happening?</h3>
+            <ul>
+                <li><strong>Promise</strong> - Represents an asynchronous operation</li>
+                <li><strong>.then()</strong> - Runs when Promise resolves successfully</li>
+                <li><strong>.catch()</strong> - Runs when Promise rejects (error)</li>
+                <li><strong>Chaining</strong> - Multiple .then() calls run in sequence</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

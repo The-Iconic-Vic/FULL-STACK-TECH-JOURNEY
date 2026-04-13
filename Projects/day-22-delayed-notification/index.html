@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delayed Notification | Async JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🔔 Delayed Notification System</h1>
+        <p>Simulating an API call with loading states and error handling</p>
+
+        <div class="notification-card">
+            <div class="notification-icon" id="notification-icon">📡</div>
+            <div class="notification-message" id="notification-message">
+                Click the button to load data
+            </div>
+            <button id="load-data-btn" class="load-btn">Load Data</button>
+        </div>
+
+        <div class="info-section">
+            <h3>How it works:</h3>
+            <ol>
+                <li>Click "Load Data" button</li>
+                <li>Shows loading state with spinner animation</li>
+                <li>Simulates API call (2 second delay)</li>
+                <li>70% chance of success, 30% chance of error</li>
+                <li>Displays success or error message accordingly</li>
+            </ol>
+        </div>
+
+        <div class="promise-explanation">
+            <h3>Promise States Demonstrated:</h3>
+            <ul>
+                <li><strong>Pending</strong> - Loading message displayed</li>
+                <li><strong>Fulfilled</strong> - Success message with ✓</li>
+                <li><strong>Rejected</strong> - Error message with ❌</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
