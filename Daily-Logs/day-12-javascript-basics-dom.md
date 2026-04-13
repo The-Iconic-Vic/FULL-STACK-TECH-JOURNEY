@@ -1,7 +1,7 @@
 # 📅 Day 12: Introduction to JavaScript
 
 **Date:** April 4, 2026  
-**Author:** Victor Innocent (@TheIconicVic)  
+**Author:** Victor Innocent (@TheIconicVic_)  
 **Phase:** Phase 1 - MERN Foundation  
 **Topics:** JavaScript Basics, Variables, Data Types, Operators, DOM Manipulation
 
