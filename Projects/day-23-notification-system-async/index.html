@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification System | Async/Await</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🔔 Async/Await Notification System</h1>
+        <p>Using async/await with try/catch for cleaner async code</p>
+
+        <div class="notification-card">
+            <div class="notification-icon" id="notification-icon">📡</div>
+            <div class="notification-message" id="notification-message">
+                Click the button to load data
+            </div>
+            <button id="load-data-btn" class="load-btn">Load Data</button>
+        </div>
+
+        <div class="code-comparison">
+            <h3>Promise vs Async/Await</h3>
+            <div class="comparison-grid">
+                <div class="promise-code">
+                    <h4>Promise Version (.then/.catch)</h4>
+                    <pre><code>
+fetchData()
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error(error);
+  });
+                    </code></pre>
+                </div>
+                <div class="async-code">
+                    <h4>Async/Await Version</h4>
+                    <pre><code>
+async function loadData() {
+  try {
+    const data = await fetchData();
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="explanation">
+            <h3>What's happening?</h3>
+            <ul>
+                <li><strong>async</strong> - Declares function returns a Promise</li>
+                <li><strong>await</strong> - Pauses execution until Promise resolves</li>
+                <li><strong>try/catch</strong> - Handles errors like synchronous code</li>
+                <li><strong>70% success rate</strong> - Simulates real API behavior</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

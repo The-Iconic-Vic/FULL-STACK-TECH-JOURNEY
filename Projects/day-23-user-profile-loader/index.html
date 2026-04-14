@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Loader | Promise.all()</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>👤 User Profile Loader</h1>
+        <p>Fetching user data in parallel with Promise.all()</p>
+
+        <button id="load-profile-btn" class="load-btn">Load User Profile</button>
+
+        <div id="loading-spinner" class="loading-spinner hidden">
+            <div class="spinner"></div>
+            <p>Loading user data...</p>
+        </div>
+
+        <div id="profile-container" class="profile-container hidden">
+            <div class="profile-header">
+                <div class="profile-avatar">👤</div>
+                <div class="profile-info" id="profile-info"></div>
+            </div>
+            
+            <div class="profile-section">
+                <h3>📝 Recent Posts</h3>
+                <ul id="posts-list" class="posts-list"></ul>
+            </div>
+            
+            <div class="profile-section">
+                <h3>👥 Friends</h3>
+                <ul id="friends-list" class="friends-list"></ul>
+            </div>
+        </div>
+
+        <div class="timing-info" id="timing-info"></div>
+
+        <div class="explanation">
+            <h3>Promise.all() Explained</h3>
+            <p><strong>Promise.all()</strong> runs multiple promises simultaneously and waits for ALL to complete.</p>
+            <ul>
+                <li>📡 Fetching user profile: <strong>1 second</strong></li>
+                <li>📝 Fetching user posts: <strong>1.5 seconds</strong></li>
+                <li>👥 Fetching user friends: <strong>1 second</strong></li>
+                <li><strong>Total time with Promise.all(): ~1.5 seconds</strong> (not 3.5 seconds!)</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
