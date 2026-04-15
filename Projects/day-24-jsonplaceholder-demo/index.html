@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSONPlaceholder Demo | Fetch API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>📡 JSONPlaceholder Demo</h1>
+        <p>Fetching data from a fake REST API</p>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="posts">Posts</button>
+            <button class="tab-btn" data-tab="users">Users</button>
+        </div>
+
+        <!-- Posts Section -->
+        <div id="posts-section" class="section active">
+            <h2>Latest Posts</h2>
+            <div id="posts-container" class="posts-container">
+                <div class="loading">Loading posts...</div>
+            </div>
+        </div>
+
+        <!-- Users Section -->
+        <div id="users-section" class="section">
+            <h2>User Details</h2>
+            <div class="user-select">
+                <label>Select User ID:</label>
+                <select id="user-select">
+                    <option value="1">User 1</option>
+                    <option value="2">User 2</option>
+                    <option value="3">User 3</option>
+                    <option value="4">User 4</option>
+                    <option value="5">User 5</option>
+                </select>
+            </div>
+            <div id="user-container" class="user-container">
+                <div class="loading">Select a user to load...</div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3>What is happening?</h3>
+            <ul>
+                <li><strong>fetch()</strong> - Makes HTTP request to API endpoint</li>
+                <li><strong>.json()</strong> - Parses JSON response into JavaScript object</li>
+                <li><strong>response.ok</strong> - Checks if request was successful</li>
+                <li><strong>async/await</strong> - Handles asynchronous operations</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

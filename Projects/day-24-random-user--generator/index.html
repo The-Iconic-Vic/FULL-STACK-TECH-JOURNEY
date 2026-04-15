@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random User Generator | Fetch API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>👤 Random User Generator</h1>
+        <p>Fetch random user data from randomuser.me API</p>
+
+        <div id="user-card" class="user-card">
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+                <p>Loading random user...</p>
+            </div>
+        </div>
+
+        <button id="new-user-btn" class="new-user-btn">🎲 Load Random User</button>
+
+        <div class="info-section">
+            <h3>API Information</h3>
+            <ul>
+                <li><strong>API Endpoint:</strong> https://randomuser.me/api/</li>
+                <li><strong>Response Format:</strong> JSON</li>
+                <li><strong>Data includes:</strong> Name, email, location, phone, picture, and more</li>
+                <li><strong>Free to use:</strong> No API key required</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
