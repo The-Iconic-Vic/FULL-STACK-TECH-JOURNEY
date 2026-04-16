@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Posts App | API Data Display</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>📝 Enhanced Posts App</h1>
+        <p>Search, filter, sort, and paginate posts from JSONPlaceholder API</p>
+
+        <!-- Controls -->
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="🔍 Search by title...">
+            </div>
+            <div class="sort-box">
+                <label>Sort by:</label>
+                <select id="sort-select">
+                    <option value="title-asc">Title (A-Z)</option>
+                    <option value="title-desc">Title (Z-A)</option>
+                    <option value="id-asc">ID (Oldest first)</option>
+                    <option value="id-desc">ID (Newest first)</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Posts Container -->
+        <div id="posts-container" class="posts-container">
+            <div class="skeleton-loader">
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button id="load-more-btn" class="load-more-btn">Load More Posts</button>
+            <div class="pagination-info">
+                Showing <span id="showing-count">0</span> of <span id="total-count">0</span> posts
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3>Features Demonstrated</h3>
+            <ul>
+                <li><strong>map()</strong> - Convert API data to HTML</li>
+                <li><strong>filter()</strong> - Search by title</li>
+                <li><strong>sort()</strong> - Sort by title or ID</li>
+                <li><strong>Pagination</strong> - Load more posts incrementally</li>
+                <li><strong>Loading skeleton</strong> - Visual feedback while fetching</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

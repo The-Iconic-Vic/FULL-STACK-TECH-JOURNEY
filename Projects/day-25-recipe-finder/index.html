@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder | TheMealDB API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🍳 Recipe Finder</h1>
+        <p>Search for recipes by ingredient (e.g., chicken, rice, pasta)</p>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <input type="text" id="search-input" placeholder="Enter an ingredient (e.g., chicken)">
+            <button id="search-btn" class="search-btn">🔍 Find Recipes</button>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <label>Filter by Area:</label>
+            <select id="area-filter">
+                <option value="all">All Cuisines</option>
+                <option value="American">American</option>
+                <option value="British">British</option>
+                <option value="Chinese">Chinese</option>
+                <option value="French">French</option>
+                <option value="Indian">Indian</option>
+                <option value="Italian">Italian</option>
+                <option value="Japanese">Japanese</option>
+                <option value="Mexican">Mexican</option>
+                <option value="Thai">Thai</option>
+            </select>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div id="loading-spinner" class="loading-spinner hidden">
+            <div class="spinner"></div>
+            <p>Searching for recipes...</p>
+        </div>
+
+        <!-- Results Count -->
+        <div id="results-count" class="results-count hidden">
+            Found <span id="recipe-count">0</span> recipes
+        </div>
+
+        <!-- Recipes Grid -->
+        <div id="recipes-grid" class="recipes-grid"></div>
+
+        <!-- Modal for Recipe Details -->
+        <div id="recipe-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="modal-body"></div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3>API Information</h3>
+            <ul>
+                <li><strong>API:</strong> TheMealDB (free, no API key)</li>
+                <li><strong>Endpoint:</strong> https://www.themealdb.com/api/json/v1/1/filter.php?i={ingredient}</li>
+                <li><strong>Features:</strong> Search by ingredient, filter by cuisine, view full recipe</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
