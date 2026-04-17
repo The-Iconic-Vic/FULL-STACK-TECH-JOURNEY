@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post | POST Request Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>📝 Create New Post</h1>
+        <p>Send a POST request to JSONPlaceholder API</p>
+
+        <form id="post-form" class="post-form">
+            <div class="form-group">
+                <label for="user-id">User ID</label>
+                <input type="number" id="user-id" name="userId" required min="1" max="10">
+                <small>Enter a number between 1 and 10</small>
+            </div>
+
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+
+            <div class="form-group">
+                <label for="body">Body</label>
+                <textarea id="body" name="body" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Create Post</button>
+        </form>
+
+        <div id="response-container" class="response-container hidden">
+            <div class="response-header">
+                <h3>📡 API Response</h3>
+                <button id="clear-response" class="clear-btn">Clear</button>
+            </div>
+            <div id="response-content" class="response-content"></div>
+        </div>
+
+        <div class="info-section">
+            <h3>What's happening?</h3>
+            <ul>
+                <li><strong>POST Request</strong> - Sends data to the server</li>
+                <li><strong>Headers</strong> - Content-Type: application/json</li>
+                <li><strong>Body</strong> - Form data converted to JSON</li>
+                <li><strong>Response</strong> - API returns the created post with an ID</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
