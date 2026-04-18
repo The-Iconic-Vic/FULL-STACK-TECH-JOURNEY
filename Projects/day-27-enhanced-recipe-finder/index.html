@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Recipe Finder | Error Handling & Cache</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🍳 Enhanced Recipe Finder</h1>
+        <p>Search recipes with error handling, retry, and offline cache</p>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <input type="text" id="search-input" placeholder="Enter an ingredient (e.g., chicken)" value="chicken">
+            <button id="search-btn" class="search-btn">🔍 Find Recipes</button>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <label>Filter by Area:</label>
+            <select id="area-filter">
+                <option value="all">All Cuisines</option>
+                <option value="American">American</option>
+                <option value="British">British</option>
+                <option value="Chinese">Chinese</option>
+                <option value="French">French</option>
+                <option value="Indian">Indian</option>
+                <option value="Italian">Italian</option>
+                <option value="Japanese">Japanese</option>
+                <option value="Mexican">Mexican</option>
+            </select>
+        </div>
+
+        <!-- Status Message -->
+        <div id="status-message" class="status-message hidden"></div>
+
+        <!-- Results Count -->
+        <div id="results-count" class="results-count hidden">
+            Found <span id="recipe-count">0</span> recipes
+        </div>
+
+        <!-- Recipes Grid -->
+        <div id="recipes-grid" class="recipes-grid"></div>
+
+        <!-- Retry Button -->
+        <div id="retry-container" class="retry-container hidden">
+            <button id="retry-btn" class="retry-btn">🔄 Retry Search</button>
+        </div>
+
+        <!-- Modal -->
+        <div id="recipe-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="modal-body"></div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3>Enhanced Features</h3>
+            <ul>
+                <li><strong>Error Handling</strong> - Network, HTTP, and parsing errors</li>
+                <li><strong>Retry Button</strong> - Manual retry on failure</li>
+                <li><strong>Cache System</strong> - Stores successful searches in localStorage</li>
+                <li><strong>Offline Support</strong> - Shows cached results when offline</li>
+                <li><strong>Rate Limit Handling</strong> - Detects API limit errors</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

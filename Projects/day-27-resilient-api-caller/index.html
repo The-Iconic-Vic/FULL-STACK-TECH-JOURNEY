@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resilient API Caller | Error Handling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🛡️ Resilient API Caller</h1>
+        <p>Demonstrates retry logic, error handling, and user-friendly messages</p>
+
+        <div class="api-controls">
+            <label>API Endpoint:</label>
+            <select id="endpoint-select">
+                <option value="success">✅ Success (200)</option>
+                <option value="404">❌ 404 Not Found</option>
+                <option value="500">❌ 500 Server Error</option>
+                <option value="slow">⏳ Slow Response (3s)</option>
+                <option value="invalid">❌ Invalid JSON</option>
+            </select>
+            <button id="fetch-btn" class="fetch-btn">Fetch Data</button>
+        </div>
+
+        <div id="status-container" class="status-container">
+            <div id="status-message" class="status-message idle">
+                Ready. Select an endpoint and click "Fetch Data".
+            </div>
+        </div>
+
+        <div id="result-container" class="result-container hidden">
+            <h3>Response Data</h3>
+            <pre id="result-data" class="result-data"></pre>
+        </div>
+
+        <div class="info-section">
+            <h3>Error Handling Features</h3>
+            <ul>
+                <li><strong>Network Error</strong> - Detects offline/DNS issues</li>
+                <li><strong>HTTP Errors</strong> - 404, 500 with specific messages</li>
+                <li><strong>Parsing Errors</strong> - Invalid JSON handling</li>
+                <li><strong>Retry Logic</strong> - Automatically retries failed requests (3 times)</li>
+                <li><strong>Timeout</strong> - 5 second timeout for slow responses</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
