@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieHub | Week 4 Capstone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>🎬 MovieHub</h1>
+            <p>Search and discover movies</p>
+        </header>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search for a movie...">
+                <button id="search-btn">🔍 Search</button>
+            </div>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="category-tabs">
+            <button class="category-btn active" data-category="popular">🔥 Popular</button>
+            <button class="category-btn" data-category="top_rated">⭐ Top Rated</button>
+            <button class="category-btn" data-category="upcoming">📅 Upcoming</button>
+            <button class="category-btn" data-category="watchlist">📝 Watchlist</button>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Loading movies...</p>
+        </div>
+
+        <!-- Error State -->
+        <div id="error-message" class="error-message hidden"></div>
+
+        <!-- Movies Grid -->
+        <div id="movies-grid" class="movies-grid"></div>
+
+        <!-- Pagination -->
+        <div id="pagination" class="pagination hidden">
+            <button id="prev-page" class="page-btn">← Previous</button>
+            <span id="page-info">Page 1</span>
+            <button id="next-page" class="page-btn">Next →</button>
+        </div>
+
+        <!-- Movie Modal -->
+        <div id="movie-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="modal-body"></div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Data from TMDB | Week 4 Capstone Project</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
