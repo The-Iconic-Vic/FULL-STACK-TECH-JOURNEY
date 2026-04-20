@@ -1,0 +1,10 @@
+.app {
+  text-align: center;
+  padding: 2rem;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+h1 {
+  color: #646cff;
+  margin-bottom: 2rem;
+}
