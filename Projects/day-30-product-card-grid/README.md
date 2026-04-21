@@ -1,16 +1,61 @@
-# React + Vite
+# Product Card Grid - Day 30 Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
+A responsive product catalog grid built with React components demonstrating:
+- Component composition
+- JSX syntax and rules
+- CSS Modules for styling
+- Props passing
+- State management (add to cart)
 
-Currently, two official plugins are available:
+## File Structure
+day-30-product-card-grid/
+├── src/
+│ ├── components/
+│ │ ├── ProductCard.jsx
+│ │ ├── ProductCard.module.css
+│ │ ├── Card.jsx
+│ │ ├── Avatar.jsx
+│ │ ├── Title.jsx
+│ │ └── Description.jsx
+│ ├── App.jsx
+│ ├── App.module.css
+│ └── main.jsx
+├── package.json
+├── index.html
+└── README.md
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+text
 
-## React Compiler
+## JSX Features Demonstrated
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Feature | Example |
+|---------|---------|
+| Embedding JavaScript | `{product.name}` |
+| Conditional rendering | `{isAdded ? '✓ Added!' : 'Add to Cart'}` |
+| Fragments | `<>...</>` |
+| className | `className={styles.card}` |
+| Self-closing tags | `<ProductCard />` |
+| Comments | `{/* Comment */}` |
 
-## Expanding the ESLint configuration
+## Components
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Component | Purpose |
+|-----------|---------|
+| App | Main container, renders grid of products |
+| ProductCard | Displays individual product |
+| Card | Reusable card wrapper |
+| Avatar | Circular image component |
+| Title | Reusable heading component |
+| Description | Text description component |
+
+## Styling Methods Used
+- **CSS Modules** - Scoped component styles
+- **CSS Grid** - Product grid layout
+- **Inline styles** - Dynamic button states
+
+## Setup Instructions
+```bash
+cd day-30-product-card-grid
+npm install
+npm run dev

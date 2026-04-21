@@ -1,120 +1,77 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import React from 'react'
+import ProductCard from './components/ProductCard'
+import styles from './App.module.css'
+
+// Product data
+const products = [
+  {
+    id: 1,
+    name: "Wireless Headphones",
+    price: 99.99,
+    rating: 4.5,
+    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop",
+    description: "High-quality wireless headphones with noise cancellation"
+  },
+  {
+    id: 2,
+    name: "Smart Watch",
+    price: 199.99,
+    rating: 4.8,
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=300&fit=crop",
+    description: "Track your fitness and stay connected"
+  },
+  {
+    id: 3,
+    name: "Premium Backpack",
+    price: 49.99,
+    rating: 4.2,
+    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&h=300&fit=crop",
+    description: "Durable, waterproof backpack for everyday use"
+  },
+  {
+    id: 4,
+    name: "Mechanical Keyboard",
+    price: 129.99,
+    rating: 4.7,
+    image: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=300&h=300&fit=crop",
+    description: "RGB mechanical keyboard with blue switches"
+  },
+  {
+    id: 5,
+    name: "USB-C Hub",
+    price: 39.99,
+    rating: 4.3,
+    image: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=300&h=300&fit=crop",
+    description: "7-in-1 USB-C hub with HDMI and Ethernet"
+  },
+  {
+    id: 6,
+    name: "Wireless Mouse",
+    price: 29.99,
+    rating: 4.4,
+    image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=300&h=300&fit=crop",
+    description: "Ergonomic wireless mouse with long battery life"
+  }
+]
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className={styles.app}>
+      <header className={styles.header}>
+        <h1>🛍️ Product Catalog</h1>
+        <p>Browse our featured products</p>
+      </header>
 
-      <div className="ticks"></div>
+      <div className={styles.grid}>
+        {products.map(product => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      <footer className={styles.footer}>
+        <p>© 2026 Product Catalog | React Component Demo</p>
+      </footer>
+    </div>
   )
 }
 
