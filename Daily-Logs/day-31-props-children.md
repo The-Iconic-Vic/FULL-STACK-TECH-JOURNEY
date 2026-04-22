@@ -1,6 +1,3 @@
-**File:** `daily-logs/day-31-props-children.md`
-
-```markdown
 # 📅 Day 31: Props - Passing Data Between Components
 
 **Date:** April 22, 2026  
@@ -478,7 +475,3 @@ function Component({ user: { name, age } }) { }
 7. **Component composition** can reduce prop drilling
 8. **Context API** and **state management** are solutions for deeper prop drilling
 
----
-
-*Day 31 - Props - Passing Data Between Components*
-```
