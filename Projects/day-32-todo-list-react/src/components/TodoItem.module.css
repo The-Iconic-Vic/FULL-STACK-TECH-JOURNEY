@@ -1,0 +1,72 @@
+.todoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.todoItem:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.todoItem.completed {
+  opacity: 0.6;
+  background: #e9ecef;
+}
+
+.todoItem.completed .text {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.checkbox {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  accent-color: #28a745;
+}
+
+.text {
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
+  word-break: break-word;
+}
+
+.editInput {
+  flex: 1;
+  padding: 0.25rem 0.5rem;
+  border: 2px solid #667eea;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.editBtn, .deleteBtn {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.editBtn:hover {
+  background: #17a2b8;
+  color: white;
+}
+
+.deleteBtn:hover {
+  background: #dc3545;
+  color: white;
+}
