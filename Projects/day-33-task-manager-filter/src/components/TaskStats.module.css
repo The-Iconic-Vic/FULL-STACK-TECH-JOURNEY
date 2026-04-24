@@ -1,0 +1,38 @@
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.statCard {
+  text-align: center;
+}
+
+.statValue {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.statLabel {
+  font-size: 0.7rem;
+  color: #666;
+}
+
+.progressBar {
+  background: #e0e0e0;
+  border-radius: 10px;
+  height: 6px;
+  overflow: hidden;
+  margin-bottom: 0.25rem;
+}
+
+.progressFill {
+  background: #28a745;
+  height: 100%;
+  transition: width 0.3s ease;
+}

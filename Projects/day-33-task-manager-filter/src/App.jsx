@@ -1,121 +1,94 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import TaskList from './components/TaskList'
+import TaskFilter from './components/TaskFilter'
+import TaskStats from './components/TaskStats'
+import styles from './App.module.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [tasks, setTasks] = useState([
+    { id: 1, text: 'Learn React useState', completed: false },
+    { id: 2, text: 'Master conditional rendering', completed: false },
+    { id: 3, text: 'Build a task manager', completed: true },
+    { id: 4, text: 'Review React concepts', completed: false },
+    { id: 5, text: 'Practice with filters', completed: false }
+  ])
+
+  const [filter, setFilter] = useState('all')
+  const [newTaskText, setNewTaskText] = useState('')
+
+  // Add new task
+  const addTask = () => {
+    if (newTaskText.trim() === '') return
+    const newTask = {
+      id: Date.now(),
+      text: newTaskText,
+      completed: false
+    }
+    setTasks([...tasks, newTask])
+    setNewTaskText('')
+  }
+
+  // Toggle task completion
+  const toggleTask = (id) => {
+    setTasks(tasks.map(task =>
+      task.id === id ? { ...task, completed: !task.completed } : task
+    ))
+  }
+
+  // Delete task
+  const deleteTask = (id) => {
+    setTasks(tasks.filter(task => task.id !== id))
+  }
+
+  // Filter tasks based on current filter
+  const filteredTasks = tasks.filter(task => {
+    if (filter === 'active') return !task.completed
+    if (filter === 'completed') return task.completed
+    return true // 'all'
+  })
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className={styles.app}>
+      <div className={styles.container}>
+        <h1 className={styles.title}>📋 Task Manager</h1>
+        <p className={styles.subtitle}>Filter, manage, and track your tasks</p>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+        {/* Add Task Form */}
+        <div className={styles.addForm}>
+          <input
+            type="text"
+            className={styles.input}
+            placeholder="Add a new task..."
+            value={newTaskText}
+            onChange={(e) => setNewTaskText(e.target.value)}
+            onKeyPress={(e) => e.key === 'Enter' && addTask()}
+          />
+          <button className={styles.addBtn} onClick={addTask}>
+            Add Task
+          </button>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+        {/* Filter Component */}
+        <TaskFilter currentFilter={filter} onFilterChange={setFilter} />
+
+        {/* Stats Component */}
+        <TaskStats tasks={tasks} />
+
+        {/* Task List with Conditional Rendering */}
+        {filteredTasks.length === 0 ? (
+          <div className={styles.emptyState}>
+            <p>🎯 No tasks found for "{filter}" filter</p>
+            <p>Try adding a new task or changing the filter</p>
+          </div>
+        ) : (
+          <TaskList
+            tasks={filteredTasks}
+            onToggle={toggleTask}
+            onDelete={deleteTask}
+          />
+        )}
+      </div>
+    </div>
   )
 }
 

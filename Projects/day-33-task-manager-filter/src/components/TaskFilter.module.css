@@ -1,0 +1,35 @@
+.filterContainer {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.filterBtn {
+  background: #f8f9fa;
+  color: #666;
+  border: none;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filterBtn:hover {
+  background: #e9ecef;
+  transform: translateY(-2px);
+}
+
+.filterBtn.active {
+  background: #667eea;
+  color: white;
+}
+
+.icon {
+  font-size: 1rem;
+}
