@@ -1,0 +1,91 @@
+.card {
+  background: #f8f9fa;
+  border-radius: 16px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card.favorite {
+  background: #fff8e7;
+  border-color: #ffc107;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.favoriteBtn {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: #ffc107;
+}
+
+.ingredients {
+  font-size: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.ingredients ul {
+  margin-top: 0.25rem;
+  padding-left: 1rem;
+  color: #666;
+}
+
+.instructions {
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 0.75rem;
+}
+
+.editBtn, .deleteBtn {
+  background: none;
+  border: none;
+  font-size: 0.75rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.editBtn {
+  color: #17a2b8;
+}
+
+.editBtn:hover {
+  background: #17a2b8;
+  color: white;
+}
+
+.deleteBtn {
+  color: #dc3545;
+}
+
+.deleteBtn:hover {
+  background: #dc3545;
+  color: white;
+}
