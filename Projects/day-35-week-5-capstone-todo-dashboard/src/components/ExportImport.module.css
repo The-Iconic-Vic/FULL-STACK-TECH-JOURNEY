@@ -1,0 +1,28 @@
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.exportBtn, .importLabel {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.exportBtn:hover, .importLabel:hover {
+  background: #5a6268;
+  transform: translateY(-2px);
+}
+
+.fileInput {
+  display: none;
+}

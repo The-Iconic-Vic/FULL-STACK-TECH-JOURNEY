@@ -1,121 +1,137 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import React, { useState, useMemo } from 'react'
+import useLocalStorage from './hooks/useLocalStorage'
+import Header from './components/Header'
+import StatsDashboard from './components/StatsDashboard'
+import TodoForm from './components/TodoForm'
+import FilterBar from './components/FilterBar'
+import TodoList from './components/TodoList'
+import ExportImport from './components/ExportImport'
+import styles from './App.module.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [todos, setTodos] = useLocalStorage('todos', [])
+  const [filter, setFilter] = useState('all')
+  const [sortBy, setSortBy] = useState('date-asc')
+  const [searchTerm, setSearchTerm] = useState('')
+  const [theme, setTheme] = useLocalStorage('theme', 'light')
+
+  // Apply theme to body
+  React.useEffect(() => {
+    document.body.className = theme
+  }, [theme])
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'light' ? 'dark' : 'light')
+  }
+
+  // Add todo
+  const addTodo = (newTodo) => {
+    setTodos([...todos, { ...newTodo, id: Date.now(), completed: false, createdAt: new Date().toISOString() }])
+  }
+
+  // Update todo
+  const updateTodo = (id, updates) => {
+    setTodos(todos.map(todo => todo.id === id ? { ...todo, ...updates } : todo))
+  }
+
+  // Delete todo
+  const deleteTodo = (id) => {
+    if (window.confirm('Delete this todo?')) {
+      setTodos(todos.filter(todo => todo.id !== id))
+    }
+  }
+
+  // Toggle complete
+  const toggleComplete = (id) => {
+    setTodos(todos.map(todo =>
+      todo.id === id ? { ...todo, completed: !todo.completed } : todo
+    ))
+  }
+
+  // Bulk delete
+  const bulkDelete = (ids) => {
+    if (window.confirm(`Delete ${ids.length} selected todos?`)) {
+      setTodos(todos.filter(todo => !ids.includes(todo.id)))
+    }
+  }
+
+  // Filter and sort todos
+  const filteredAndSortedTodos = useMemo(() => {
+    let result = [...todos]
+
+    // Filter by status
+    if (filter === 'active') {
+      result = result.filter(todo => !todo.completed)
+    } else if (filter === 'completed') {
+      result = result.filter(todo => todo.completed)
+    }
+
+    // Filter by search
+    if (searchTerm) {
+      const term = searchTerm.toLowerCase()
+      result = result.filter(todo =>
+        todo.title.toLowerCase().includes(term) ||
+        todo.description?.toLowerCase().includes(term)
+      )
+    }
+
+    // Sort
+    switch(sortBy) {
+      case 'date-asc':
+        result.sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate))
+        break
+      case 'date-desc':
+        result.sort((a, b) => new Date(b.dueDate) - new Date(a.dueDate))
+        break
+      case 'priority': {
+        const priorityOrder = { high: 3, medium: 2, low: 1 }
+        result.sort((a, b) => priorityOrder[b.priority] - priorityOrder[a.priority])
+        break
+      }
+      case 'alpha-asc':
+        result.sort((a, b) => a.title.localeCompare(b.title))
+        break
+      case 'alpha-desc':
+        result.sort((a, b) => b.title.localeCompare(a.title))
+        break
+      default:
+        break
+    }
+
+    return result
+  }, [todos, filter, sortBy, searchTerm])
+
+  const stats = {
+    total: todos.length,
+    active: todos.filter(t => !t.completed).length,
+    completed: todos.filter(t => t.completed).length,
+    percent: todos.length === 0 ? 0 : Math.round((todos.filter(t => t.completed).length / todos.length) * 100)
+  }
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+    <div className={`${styles.app} ${theme}`}>
+      <div className={styles.container}>
+        <Header theme={theme} onToggleTheme={toggleTheme} />
+        <StatsDashboard stats={stats} />
+        <TodoForm onSubmit={addTodo} />
+        <FilterBar
+          filter={filter}
+          onFilterChange={setFilter}
+          sortBy={sortBy}
+          onSortChange={setSortBy}
+          searchTerm={searchTerm}
+          onSearchChange={setSearchTerm}
+        />
+        <TodoList
+          todos={filteredAndSortedTodos}
+          onToggle={toggleComplete}
+          onUpdate={updateTodo}
+          onDelete={deleteTodo}
+          onBulkDelete={bulkDelete}
+        />
+        <ExportImport todos={todos} onImport={setTodos} />
+      </div>
+    </div>
   )
 }
 

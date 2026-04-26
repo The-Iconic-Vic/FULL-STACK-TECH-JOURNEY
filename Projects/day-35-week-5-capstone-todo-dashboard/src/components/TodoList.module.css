@@ -1,0 +1,66 @@
+.listContainer {
+  margin-top: 1rem;
+}
+
+.bulkBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.selectAll {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.bulkDeleteBtn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bulkDeleteBtn:hover {
+  background: #c82333;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.empty {
+  text-align: center;
+  padding: 3rem;
+  background: #f8f9fa;
+  border-radius: 16px;
+}
+
+.emptyIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.empty h3 {
+  font-size: 1.125rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.empty p {
+  color: #666;
+}

@@ -1,0 +1,165 @@
+.todoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.todoItem:hover {
+  background: #e9ecef;
+}
+
+.todoItem.selected {
+  border-color: #667eea;
+  background: #e8f0fe;
+}
+
+.todoItem.completed {
+  opacity: 0.6;
+}
+
+.todoItem.completed .title {
+  text-decoration: line-through;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-top: 2px;
+}
+
+.completeCheckbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-top: 2px;
+  accent-color: #28a745;
+}
+
+.content {
+  flex: 1;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.priority {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  color: white;
+}
+
+.category {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  background: #e9ecef;
+  color: #333;
+}
+
+.description {
+  font-size: 0.75rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.meta {
+  font-size: 0.7rem;
+  color: #999;
+}
+
+.overdue {
+  color: #dc3545;
+  font-weight: 500;
+}
+
+.today {
+  color: #fd7e14;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.editBtn, .deleteBtn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.editBtn:hover {
+  background: #17a2b8;
+  color: white;
+}
+
+.deleteBtn:hover {
+  background: #dc3545;
+  color: white;
+}
+
+.editContainer {
+  flex: 1;
+}
+
+.editInput, .editTextarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-family: inherit;
+  margin-bottom: 0.5rem;
+}
+
+.editActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.saveBtn, .cancelBtn {
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.saveBtn {
+  background: #28a745;
+  color: white;
+}
+
+.saveBtn:hover {
+  background: #218838;
+}
+
+.cancelBtn {
+  background: #6c757d;
+  color: white;
+}
+
+.cancelBtn:hover {
+  background: #5a6268;
+}

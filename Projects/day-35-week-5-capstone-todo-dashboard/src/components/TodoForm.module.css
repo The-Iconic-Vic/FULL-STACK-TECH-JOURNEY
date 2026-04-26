@@ -1,0 +1,58 @@
+.form {
+  background: #f8f9fa;
+  border-radius: 16px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.input, .textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-family: inherit;
+  margin-bottom: 0.75rem;
+}
+
+.input:focus, .textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.row select, .row input {
+  flex: 1;
+  padding: 0.6rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  background: white;
+}
+
+.submitBtn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.875rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
