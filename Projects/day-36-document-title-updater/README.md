@@ -1,16 +1,76 @@
-# React + Vite
+# Document Title Updater - Day 36 Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
+A React component demonstrating multiple useEffect patterns:
+- Updating document title based on state
+- Loading/saving to localStorage
+- setInterval with cleanup
+- Component mount/unmount logging
 
-Currently, two official plugins are available:
+## Skills Practiced
+- useEffect with empty array (run once on mount)
+- useEffect with dependencies (run when values change)
+- useEffect cleanup functions
+- localStorage for persistence
+- setInterval and clearInterval
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## File Structure
+day-36-document-title-updater/
+├── src/
+│ ├── components/
+│ │ ├── TitleUpdater.jsx
+│ │ └── TitleUpdater.module.css
+│ ├── App.jsx
+│ ├── App.module.css
+│ └── main.jsx
+├── package.json
+├── vite.config.js
+├── index.html
+└── README.md
 
-## React Compiler
+text
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## useEffect Examples
 
-## Expanding the ESLint configuration
+### Effect 1: Update document title (dependency: title)
+```javascript
+useEffect(() => {
+  if (title) {
+    document.title = title
+  }
+}, [title])
+Effect 2: Load from localStorage (empty array - mount only)
+javascript
+useEffect(() => {
+  const savedTitle = localStorage.getItem('savedTitle')
+  if (savedTitle) {
+    setTitle(savedTitle)
+  }
+}, [])
+Effect 3: Save to localStorage (dependency: title)
+javascript
+useEffect(() => {
+  if (title) {
+    localStorage.setItem('savedTitle', title)
+  }
+}, [title])
+Effect 4: setInterval with cleanup
+javascript
+useEffect(() => {
+  const intervalId = setInterval(() => {
+    setCurrentTime(new Date().toLocaleTimeString())
+  }, 10000)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+  return () => clearInterval(intervalId)
+}, [])
+Effect 5: Mount/unmount logging
+javascript
+useEffect(() => {
+  console.log('Component MOUNTED')
+  return () => console.log('Component UNMOUNTED')
+}, [])
+Setup Instructions
+bash
+cd day-36-document-title-updater
+npm install
+npm run dev
