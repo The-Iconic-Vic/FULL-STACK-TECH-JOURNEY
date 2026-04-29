@@ -1,16 +1,32 @@
-# React + Vite
+# Custom Hooks Demo - Day 38 Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
+A demonstration of custom React hooks including:
+- useToggle - Boolean toggle functionality
+- useLocalStorage - Sync state with localStorage
+- useFetch - Reusable data fetching with caching
+- useWindowSize - Track window dimensions
 
-Currently, two official plugins are available:
+## Features
+- Multiple components using the same useFetch hook
+- Caching system prevents duplicate API requests
+- Manual refetch capability
+- Loading and error states
+- Dark mode toggle with localStorage persistence
+- Modal and dropdown controlled by useToggle
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Custom Hooks Created
 
-## React Compiler
+| Hook | Purpose | Returns |
+|------|---------|---------|
+| useToggle | Boolean toggle | [value, toggle, setTrue, setFalse] |
+| useLocalStorage | Persist state | [storedValue, setValue] |
+| useFetch | Data fetching | { data, loading, error, refetch } |
+| useWindowSize | Window dimensions | { width, height } |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Setup Instructions
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+cd day-38-custom-hooks-demo
+npm install
+npm run dev
