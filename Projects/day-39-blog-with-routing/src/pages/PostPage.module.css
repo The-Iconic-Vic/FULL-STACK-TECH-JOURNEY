@@ -1,0 +1,166 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  color: #667eea;
+  cursor: pointer;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  padding: 0;
+}
+
+.backBtn:hover {
+  text-decoration: underline;
+}
+
+.post {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 2rem;
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+}
+
+.meta {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.postId {
+  font-size: 0.875rem;
+  color: #999;
+}
+
+.body {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.navBtn {
+  background: #f0f0f0;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navBtn:hover:not(:disabled) {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.navBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.homeBtn {
+  background: #667eea;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.homeBtn:hover {
+  background: #5a67d8;
+  transform: translateY(-2px);
+}
+
+.skeleton {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.skeletonTitle {
+  height: 32px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  width: 70%;
+  margin-bottom: 1rem;
+}
+
+.skeletonMeta {
+  height: 20px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  width: 30%;
+  margin-bottom: 2rem;
+}
+
+.skeletonBody {
+  height: 100px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.error {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 20px;
+}
+
+.error h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.error p {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.homeLink {
+  color: #667eea;
+  text-decoration: none;
+}
+
+.homeLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .post {
+    padding: 1.5rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .navigation {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
