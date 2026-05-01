@@ -1,0 +1,148 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #1a1a2e;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.cart {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.summary {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  height: fit-content;
+  position: sticky;
+  top: 80px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.summaryTitle {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.total {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.checkoutBtn {
+  width: 100%;
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.checkoutBtn:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+.clearBtn {
+  width: 100%;
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clearBtn:hover {
+  background: #c82333;
+  transform: translateY(-2px);
+}
+
+.empty {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 20px;
+}
+
+.emptyIcon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.empty h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.empty p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.shopBtn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shopBtn:hover {
+  background: #5a67d8;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 800px) {
+  .cart {
+    grid-template-columns: 1fr;
+  }
+  
+  .summary {
+    position: static;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+}

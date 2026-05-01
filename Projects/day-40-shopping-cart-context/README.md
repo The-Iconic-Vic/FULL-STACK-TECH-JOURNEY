@@ -1,16 +1,45 @@
-# React + Vite
+# Shopping Cart with Context - Day 40 Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
+A fully functional shopping cart demonstrating React Context API for state management across multiple components.
 
-Currently, two official plugins are available:
+## Features
+- Add products to cart
+- Update quantities
+- Remove items from cart
+- Clear entire cart
+- Cart count badge in navbar
+- Cart summary with totals
+- Persistent cart (localStorage)
+- Product listing page
+- Empty cart state
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Key Concepts
+- Context for global cart state
+- Custom hook `useCart()` for consuming context
+- Provider wrapping entire app
+- No prop drilling - any component can access cart
 
-## React Compiler
+## File Structure
+src/
+├── contexts/
+│ └── CartContext.jsx
+├── components/
+│ ├── Navbar.jsx
+│ ├── CartIcon.jsx
+│ ├── ProductCard.jsx
+│ └── CartItem.jsx
+├── pages/
+│ ├── ProductsPage.jsx
+│ └── CartPage.jsx
+├── App.jsx
+└── main.jsx
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+text
 
-## Expanding the ESLint configuration
+## Setup Instructions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+cd day-40-shopping-cart-context
+npm install
+npm run dev

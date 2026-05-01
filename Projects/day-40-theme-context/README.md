@@ -1,16 +1,38 @@
-# React + Vite
+# Theme Context Demo - Day 40 Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
+Demonstration of React Context API for theme management (light/dark mode) across multiple components.
 
-Currently, two official plugins are available:
+## Features
+- Light/Dark theme toggle
+- Theme preference saved to localStorage
+- Theme available in Navbar, Toggle button, Cards, and HomePage
+- No prop drilling - components access theme via useContext
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Key Concepts
+- `createContext()` - Creates context object
+- `Provider` - Wraps components needing access
+- `useContext()` - Consumes context value
+- Custom hook `useTheme()` for cleaner consumption
 
-## React Compiler
+## File Structure
+src/
+├── contexts/
+│ └── ThemeContext.jsx
+├── components/
+│ ├── Navbar.jsx
+│ ├── ThemeToggle.jsx
+│ └── Card.jsx
+├── pages/
+│ └── HomePage.jsx
+├── App.jsx
+└── main.jsx
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+text
 
-## Expanding the ESLint configuration
+## Setup Instructions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+cd day-40-theme-context
+npm install
+npm run dev

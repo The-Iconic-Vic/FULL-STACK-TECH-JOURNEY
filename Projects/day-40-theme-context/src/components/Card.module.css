@@ -1,0 +1,27 @@
+.card {
+  padding: 1.5rem;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.light {
+  background: white;
+  color: #333;
+}
+
+.dark {
+  background: #1e2a3a;
+  color: #e0e0e0;
+}
+
+.title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  opacity: 0.8;
+}
