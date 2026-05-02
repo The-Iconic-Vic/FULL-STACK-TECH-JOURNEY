@@ -1,0 +1,193 @@
+.counter {
+  background: white;
+  border-radius: 24px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #1a1a2e;
+  margin-bottom: 2rem;
+}
+
+.display {
+  margin-bottom: 2rem;
+}
+
+.count {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #667eea;
+  background: #f8f9fa;
+  padding: 0.5rem 2rem;
+  border-radius: 16px;
+  display: inline-block;
+  min-width: 150px;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #e9ecef;
+  color: #333;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.increment {
+  background: #28a745;
+  color: white;
+}
+
+.increment:hover {
+  background: #218838;
+}
+
+.reset {
+  background: #ffc107;
+  color: #333;
+}
+
+.reset:hover {
+  background: #e0a800;
+}
+
+.setValue {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.setBtn {
+  background: #17a2b8;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.setBtn:hover {
+  background: #138496;
+  transform: translateY(-2px);
+}
+
+.info {
+  text-align: left;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.info h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #1a1a2e;
+}
+
+.codeBlock {
+  background: #1a1a2e;
+  color: #e0e0e0;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.codeBlock pre {
+  font-size: 0.7rem;
+  font-family: monospace;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.useStateBox, .useReducerBox {
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.useStateBox {
+  background: #e3f2fd;
+}
+
+.useReducerBox {
+  background: #f3e5f5;
+}
+
+.useStateBox h4, .useReducerBox h4 {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.useStateBox p, .useReducerBox p {
+  font-size: 0.75rem;
+  margin: 0.25rem 0;
+  color: #555;
+}
+
+@media (max-width: 550px) {
+  .counter {
+    padding: 1.5rem;
+  }
+  
+  .count {
+    font-size: 3rem;
+    min-width: 120px;
+  }
+  
+  .buttons {
+    gap: 0.5rem;
+  }
+  
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  .setValue {
+    flex-direction: column;
+  }
+  
+  .comparison {
+    grid-template-columns: 1fr;
+  }
+}

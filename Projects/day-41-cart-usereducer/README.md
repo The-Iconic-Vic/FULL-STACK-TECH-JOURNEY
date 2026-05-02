@@ -1,16 +1,57 @@
-# React + Vite
+# Shopping Cart with useReducer - Day 41 Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
+A complete shopping cart application demonstrating useReducer for complex state management combined with Context API.
 
-Currently, two official plugins are available:
+## Features
+- Add products to cart
+- Update quantities
+- Remove items from cart
+- Clear entire cart
+- Cart count badge in navbar
+- Cart summary with totals
+- Persistent cart (localStorage)
+- Product listing page
+- Empty cart state
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Key Concepts
+- useReducer with actions (ADD_ITEM, REMOVE_ITEM, UPDATE_QUANTITY, CLEAR_CART)
+- Action types as constants
+- Payload for action data
+- Combined with Context API
+- LocalStorage persistence
+- Derived state (itemCount, totalPrice)
 
-## React Compiler
+## File Structure
+src/
+├── reducers/
+│ └── cartReducer.js
+├── contexts/
+│ └── CartContext.jsx
+├── components/
+│ ├── Navbar.jsx
+│ ├── CartIcon.jsx
+│ ├── ProductCard.jsx
+│ └── CartItem.jsx
+├── pages/
+│ ├── ProductsPage.jsx
+│ └── CartPage.jsx
+└── App.jsx
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Reducer Actions
+
+| Action | Payload | Description |
+|--------|---------|-------------|
+| ADD_ITEM | { product } | Add item to cart |
+| REMOVE_ITEM | { id } | Remove item from cart |
+| UPDATE_QUANTITY | { id, quantity } | Update item quantity |
+| CLEAR_CART | none | Clear entire cart |
+
+## Setup Instructions
+
+
+cd day-41-cart-usereducer
+npm install
+npm run dev

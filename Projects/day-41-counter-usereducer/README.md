@@ -1,16 +1,33 @@
-# React + Vite
+# Counter with useReducer - Day 41 Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
+A counter component demonstrating the useReducer hook for complex state management.
 
-Currently, two official plugins are available:
+## Features
+- Increment count
+- Decrement count
+- Reset to zero
+- Set custom value
+- Action type constants
+- Payload for set_value action
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Key Concepts
+- Reducer function (state, action) => newState
+- useReducer hook returns [state, dispatch]
+- Action types as constants
+- Payload for additional data
 
-## React Compiler
+## File Structure
+src/
+├── reducers/
+│ └── counterReducer.js
+├── components/
+│ └── Counter.jsx
+└── App.jsx
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Setup Instructions
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+cd day-41-counter-usereducer
+npm install
+npm run dev
