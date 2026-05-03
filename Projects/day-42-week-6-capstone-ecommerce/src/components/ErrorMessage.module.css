@@ -1,0 +1,37 @@
+.errorContainer {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 16px;
+}
+
+.errorIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.errorTitle {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.errorMessage {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.retryBtn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.retryBtn:hover {
+  background: #5a67d8;
+  transform: translateY(-2px);
+}

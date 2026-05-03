@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.content {
+  text-align: center;
+  background: white;
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.message {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.homeLink {
+  display: inline-block;
+  background: #667eea;
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.homeLink:hover {
+  background: #5a67d8;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 2rem;
+  }
+  
+  .title {
+    font-size: 4rem;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+  }
+}

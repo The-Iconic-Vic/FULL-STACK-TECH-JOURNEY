@@ -1,0 +1,141 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  color: #667eea;
+  cursor: pointer;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  padding: 0;
+}
+
+.backBtn:hover {
+  text-decoration: underline;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+}
+
+.category {
+  display: inline-block;
+  background: #e9ecef;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.rating {
+  font-size: 0.875rem;
+  color: #ffc107;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.ratingValue {
+  color: #666;
+  margin-left: 0.25rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.quantitySelector {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.quantitySelector label {
+  font-weight: 600;
+  color: #333;
+}
+
+.quantityInput {
+  width: 60px;
+  padding: 0.5rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.quantityInput:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.addToCartBtn {
+  width: 100%;
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.addToCartBtn:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .product {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  
+  .title {
+    font-size: 1.25rem;
+  }
+  
+  .price {
+    font-size: 1.5rem;
+  }
+}

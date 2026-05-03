@@ -1,0 +1,184 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #1a1a2e;
+}
+
+.checkout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+}
+
+.form {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.section {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.section h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #1a1a2e;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.formGroup label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #666;
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.875rem;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.placeOrderBtn {
+  width: 100%;
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.placeOrderBtn:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+.orderSummary {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  height: fit-content;
+  position: sticky;
+  top: 80px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.orderSummary h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.orderItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.total {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.success {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 20px;
+}
+
+.successIcon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.success h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.success p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.homeBtn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.homeBtn:hover {
+  background: #5a67d8;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 800px) {
+  .checkout {
+    grid-template-columns: 1fr;
+  }
+  
+  .orderSummary {
+    position: static;
+  }
+  
+  .row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

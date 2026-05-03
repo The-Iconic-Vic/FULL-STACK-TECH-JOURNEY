@@ -1,0 +1,22 @@
+.icon {
+  position: relative;
+  display: inline-block;
+  font-size: 1.25rem;
+}
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background: #dc3545;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
