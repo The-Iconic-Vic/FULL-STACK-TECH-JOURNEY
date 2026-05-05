@@ -1,0 +1,31 @@
+### Get all todos
+GET http://localhost:3000/api/todos
+
+### Get single todo (id=1)
+GET http://localhost:3000/api/todos/1
+
+### Get active todos
+GET http://localhost:3000/api/todos?completed=false
+
+### Create new todo
+POST http://localhost:3000/api/todos
+Content-Type: application/json
+
+{
+    "title": "Learn Express.js",
+    "completed": false
+}
+
+### Update todo (id=1)
+PUT http://localhost:3000/api/todos/1
+Content-Type: application/json
+
+{
+    "completed": true
+}
+
+### Delete todo (id=1)
+DELETE http://localhost:3000/api/todos/1
+
+### Delete all todos
+DELETE http://localhost:3000/api/todos

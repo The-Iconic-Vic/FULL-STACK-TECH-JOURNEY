@@ -3,7 +3,7 @@
 // Demonstrates: GET, POST, PUT, DELETE endpoints
 // ============================================
 
-const express = require('express');
+import express, { json, urlencoded } from 'express';
 const app = express();
 const PORT = 3000;
 
@@ -12,10 +12,10 @@ const PORT = 3000;
 // ============================================
 
 // Built-in middleware to parse JSON request bodies
-app.use(express.json());
+app.use(json());
 
 // Built-in middleware to parse URL-encoded form data
-app.use(express.urlencoded({ extended: true }));
+app.use(urlencoded({ extended: true }));
 
 // Custom logging middleware
 app.use((req, res, next) => {
