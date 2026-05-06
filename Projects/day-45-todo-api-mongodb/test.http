@@ -1,0 +1,27 @@
+### Get all todos
+GET http://localhost:3000/api/todos
+
+### Create a new todo
+POST http://localhost:3000/api/todos
+Content-Type: application/json
+
+{
+    "title": "Learn MongoDB with Mongoose"
+}
+
+### Get todo by ID (replace ID after creating)
+GET http://localhost:3000/api/todos/YOUR_TODO_ID
+
+### Update todo (replace ID)
+PUT http://localhost:3000/api/todos/YOUR_TODO_ID
+Content-Type: application/json
+
+{
+    "completed": true
+}
+
+### Delete todo (replace ID)
+DELETE http://localhost:3000/api/todos/YOUR_TODO_ID
+
+### Delete all todos
+DELETE http://localhost:3000/api/todos
