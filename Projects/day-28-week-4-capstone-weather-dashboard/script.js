@@ -4,7 +4,7 @@
 // API: OpenWeatherMap
 // ============================================
 
-const API_KEY = 'ea73356a21ebed9fd1a6ab766a1a74f8'; // Replace with your OpenWeatherMap API key
+const API_KEY = ''; // Replace with your OpenWeatherMap API key
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
 // DOM Elements

@@ -4,7 +4,7 @@
 // API: The Movie Database (TMDB)
 // ============================================
 
-const API_KEY = '16f8bce6e4626ae45171c418ac873b5f'; // Replace with your TMDB API key
+const API_KEY = ''; // Replace with your TMDB API key
 const BASE_URL = 'https://api.themoviedb.org/3';
 const IMAGE_BASE = 'https://image.tmdb.org/t/p/w500';
 
