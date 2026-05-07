@@ -54,7 +54,7 @@ Create .env file:
 
 env
 PORT=3000
-MONGODB_URI=mongodb+srv://YOUR_USERNAME:YOUR_PASSWORD@cluster.mongodb.net/todo_db
+MONGODB_URI=
 Step 4: Run the server
 bash
 npm start
