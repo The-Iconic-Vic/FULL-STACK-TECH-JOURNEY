@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #1a1a2e;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 0.5rem;
+}
+
+.product-item, .cart-item, .order-item {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.product-item:last-child, .cart-item:last-child, .order-item:last-child {
+  border-bottom: none;
+}
+
+.product-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.product-price {
+  color: #667eea;
+  font-weight: 500;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.badge-instock {
+  background: #d4edda;
+  color: #155724;
+}
+
+.badge-outstock {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.order-total {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e0e0e0;
+  text-align: right;
+}
+
+.status-pending {
+  color: #ffc107;
+}
+
+.status-shipped {
+  color: #17a2b8;
+}
+
+.status-delivered {
+  color: #28a745;
+}
+
+.status-cancelled {
+  color: #dc3545;
+}
