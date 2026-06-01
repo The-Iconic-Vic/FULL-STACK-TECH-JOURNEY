@@ -382,7 +382,7 @@ export default function HomePage() {
       <section className="text-center mb-16">
         <h1 className="text-5xl font-bold mb-4">
           Hi, I'm{' '}
-          <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Victor Innocent
           </span>
         </h1>
