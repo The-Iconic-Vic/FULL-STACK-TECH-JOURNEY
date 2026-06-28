@@ -1,6 +1,6 @@
 # 📅 Day 86: Path & Query Parameters
 
-**Date:** June 28, 2026  
+**Date:** June 23, 2026  
 **Author:** Victor Innocent (@Iconic_Vic)  
 **Phase:** Phase 3 - Advanced & Specialization  
 **Topics:** Path Parameters, Query Parameters, Validation, Optional Parameters, Parameter Order
