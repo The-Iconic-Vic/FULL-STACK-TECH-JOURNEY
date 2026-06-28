@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+:root {
+  --app-bg: #0A0A0B;
+  --app-card: #0E0E10;
+  --app-subtle: #111113;
+  --app-border: #222224;
+  --app-text: #D1D1D1;
+  --app-muted: #9CA3AF;
+  --app-dim: #6B7280;
+  --app-bright: #FFFFFF;
+}
+
+.light {
+  --app-bg: #F9FAFB;
+  --app-card: #FFFFFF;
+  --app-subtle: #F3F4F6;
+  --app-border: #E5E7EB;
+  --app-text: #374151;
+  --app-muted: #4B5563;
+  --app-dim: #9CA3AF;
+  --app-bright: #111827;
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Lora", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Theme variables mapped in Tailwind v4 */
+  --color-app-bg: var(--app-bg);
+  --color-app-card: var(--app-card);
+  --color-app-subtle: var(--app-subtle);
+  --color-app-border: var(--app-border);
+  --color-app-text: var(--app-text);
+  --color-app-muted: var(--app-muted);
+  --color-app-dim: var(--app-dim);
+  --color-app-bright: var(--app-bright);
+}
+
+body {
+  background-color: var(--app-bg);
+  color: var(--app-text);
+  font-family: var(--font-sans);
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--app-bg);
+  transition: background-color 0.25s ease;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--app-border);
+  border-radius: 3px;
+  transition: background-color 0.25s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #059669;
+}
+
+

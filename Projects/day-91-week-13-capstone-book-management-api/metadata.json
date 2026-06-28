@@ -1,0 +1,6 @@
+{
+  "name": "Book Management API",
+  "description": "An interactive FastAPI and SQLite developer playground, testing suite, and code browser for the Book Management Capstone.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
