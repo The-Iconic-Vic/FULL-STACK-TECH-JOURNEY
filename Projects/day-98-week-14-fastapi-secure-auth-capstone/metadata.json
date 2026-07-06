@@ -1,0 +1,6 @@
+{
+  "name": "FastAPI PostgreSQL Auth System",
+  "description": "An interactive playground, visualization hub, and complete codebase for a FastAPI and PostgreSQL user authentication system featuring JWT, SQLAlchemy models, Pydantic validation, and task management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
