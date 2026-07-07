@@ -1,8 +1,8 @@
 # 📅 Day 100: Background Tasks
 
-**Date:** July 7, 2026  
-**Author:** Victor Innocent (@TheIconicVic)  
-**Phase:** Phase 3 - Advanced & Specialization  
+**Date:** July 7, 2026
+**Author:** Victor Innocent (@Iconic_Vic)  
+**Phase:** Phase 3 - Advanced & Specialization
 **Topics:** BackgroundTasks, Asynchronous Processing, Email Sending, File Processing, Job Scheduling
 
 ---
