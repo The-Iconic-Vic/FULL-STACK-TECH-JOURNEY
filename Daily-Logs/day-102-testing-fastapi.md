@@ -1,7 +1,7 @@
 # 📅 Day 102: Testing FastAPI Applications
 
 **Date:** July 9, 2026  
-**Author:** Victor Innocent (@TheIconicVic)  
+**Author:** Victor Innocent (@Iconic_Vic)  
 **Phase:** Phase 3 - Advanced & Specialization  
 **Topics:** Pytest, TestClient, Test Database, Fixtures, Authentication Testing, Error Testing
 
